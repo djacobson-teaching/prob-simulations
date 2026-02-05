@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probability Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Probability Simulator</h1>
+
+    <div class="controls">
+      <label>Choose Experiment:</label>
+      <select id="experiment">
+        <option value="coin">Coin Flip</option>
+        <option value="dice">Dice Roll</option>
+        <option value="roulette">Roulette (0–36)</option>
+        <option value="custom">Custom Range</option>
+      </select>
+
+      <label>Number of Trials:</label>
+      <input type="number" id="trials" min="1" value="1000" />
+
+      <div id="custom-options" style="display:none;">
+        <label>Min:</label>
+        <input type="number" id="min" value="1" />
+        <label>Max:</label>
+        <input type="number" id="max" value="10" />
+      </div>
+
+      <button id="runBtn">Run Simulation</button>
+    </div>
+
+    <canvas id="chart"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
